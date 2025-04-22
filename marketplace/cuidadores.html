@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe Marketplace - Cuidadores</title>
+    <meta name="description" content="Encontre cuidadores qualificados para idosos, pessoas com necessidades especiais e crianças. Profissionais verificados, avaliados e referenciados.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../app-web/img/favicon.ico">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="cuidadores.html" class="active">Cuidadores</a></li>
+                    <li><a href="farmacias.html">Farmácias</a></li>
+                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" class="login-link btn btn-outline">Entrar</a>
+                <a href="#" class="register-link btn btn-primary">Cadastrar</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero inner-page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cuidadores Profissionais</h1>
+                <p>Encontre cuidadores de confiança para idosos, pessoas com necessidades especiais e crianças. Todos os profissionais são verificados e qualificados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Busca e Filtros -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <form id="search-filters" class="search-form">
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="service-type">Tipo de Serviço</label>
+                            <select id="service-type" name="service_type">
+                                <option value="">Todos os serviços</option>
+                                <option value="elderly">Cuidador de Idosos</option>
+                                <option value="children">Cuidador de Crianças</option>
+                                <option value="special_needs">Necessidades Especiais</option>
+                                <option value="home_care">Acompanhamento Domiciliar</option>
+                                <option value="nurse">Enfermagem</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="specialty">Especialidade</label>
+                            <select id="specialty" name="specialty">
+                                <option value="">Todas as especialidades</option>
+                                <option value="alzheimer">Alzheimer</option>
+                                <option value="parkinson">Parkinson</option>
+                                <option value="autism">Autismo</option>
+                                <option value="physical_therapy">Fisioterapia</option>
+                                <option value="occupational_therapy">Terapia Ocupacional</option>
+                                <option value="special_education">Educação Especial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="availability">Disponibilidade</label>
+                            <select id="availability" name="availability">
+                                <option value="">Qualquer disponibilidade</option>
+                                <option value="daily">Diária</option>
+                                <option value="weekly">Semanal</option>
+                                <option value="overnight">Pernoite</option>
+                                <option value="24h">24 horas</option>
+                                <option value="emergency">Emergência</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="rating">Avaliação Mínima</label>
+                            <select id="rating" name="rating">
+                                <option value="">Qualquer avaliação</option>
+                                <option value="5">5 estrelas</option>
+                                <option value="4">4+ estrelas</option>
+                                <option value="3">3+ estrelas</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="price-range">Faixa de Preço</label>
+                            <div class="range-slider">
+                                <span class="range-value">R$ 100 - R$ 300</span>
+                                <input type="range" id="price-range" name="price_range" min="100" max="500" step="10" value="300">
+                            </div>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="experience">Experiência Mínima</label>
+                            <select id="experience" name="experience">
+                                <option value="">Qualquer experiência</option>
+                                <option value="1">1+ ano</option>
+                                <option value="3">3+ anos</option>
+                                <option value="5">5+ anos</option>
+                                <option value="10">10+ anos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="gender">Gênero</label>
+                            <select id="gender" name="gender">
+                                <option value="">Todos</option>
+                                <option value="female">Feminino</option>
+                                <option value="male">Masculino</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group search-button-group">
+                            <button type="submit" class="btn btn-primary">Buscar Profissionais</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Resultados -->
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cuidadores Disponíveis</h2>
+                <p>Encontramos 28 profissionais que atendem seus critérios</p>
+            </div>
+            
+            <div class="search-results">
+                <div class="search-results-grid">
+                    <!-- Cuidador 1 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-1.jpg" alt="Mariana Santos">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Mariana Santos</h3>
+                            <p class="service-type">Cuidadora de Idosos</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (87 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>12 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Alzheimer</span>
+                                <span class="tag">Parkinson</span>
+                                <span class="tag">Fisioterapia</span>
+                            </div>
+                            <p class="price">R$ <strong>220,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cuidador 2 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-2.jpg" alt="Carlos Mendes">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                <span class="badge top-rated"><i class="fas fa-award"></i> Top Avaliado</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Carlos Mendes</h3>
+                            <p class="service-type">Cuidador e Enfermeiro</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (63 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>8 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Enfermagem</span>
+                                <span class="tag">Mobilidade</span>
+                                <span class="tag">Medicação</span>
+                            </div>
+                            <p class="price">R$ <strong>250,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cuidador 3 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-3.jpg" alt="Ana Cristina">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Ana Cristina</h3>
+                            <p class="service-type">Cuidadora de Crianças Especiais</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0 (35 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>6 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Autismo</span>
+                                <span class="tag">TDAH</span>
+                                <span class="tag">Educação Especial</span>
+                            </div>
+                            <p class="price">R$ <strong>200,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cuidador 4 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-4.jpg" alt="Roberto Alves">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Roberto Alves</h3>
+                            <p class="service-type">Cuidador Domiciliar</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.6 (42 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>5 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Pós-operatório</span>
+                                <span class="tag">Reabilitação</span>
+                                <span class="tag">Idosos</span>
+                            </div>
+                            <p class="price">R$ <strong>180,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cuidador 5 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-5.jpg" alt="Fernanda Lima">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                <span class="badge instant"><i class="fas fa-bolt"></i> Disponível Agora</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Fernanda Lima</h3>
+                            <p class="service-type">Cuidadora e Fisioterapeuta</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (56 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>9 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Fisioterapia</span>
+                                <span class="tag">Idosos</span>
+                                <span class="tag">Exercícios</span>
+                            </div>
+                            <p class="price">R$ <strong>230,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cuidador 6 -->
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/cuidador-6.jpg" alt="Paulo Rodrigues">
+                            <div class="service-badges">
+                                <span class="badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                            </div>
+                        </div>
+                        <div class="service-details">
+                            <h3>Paulo Rodrigues</h3>
+                            <p class="service-type">Cuidador de Idosos</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0 (29 avaliações)</span>
+                            </div>
+                            <p>Experiência: <strong>4 anos</strong></p>
+                            <div class="specialist-tags">
+                                <span class="tag">Alzheimer</span>
+                                <span class="tag">Atividades</span>
+                                <span class="tag">Companhia</span>
+                            </div>
+                            <p class="price">R$ <strong>170,00</strong>/diária</p>
+                            <a href="#" class="btn btn-primary">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paginação -->
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#" class="next">Próxima <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Dizem Nossos Clientes</h2>
+                <p>Histórias reais de famílias que encontraram o cuidador ideal</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"A Mariana foi um anjo que entrou na vida da minha mãe. Com sua experiência em Alzheimer, trouxe conforto e segurança em um momento muito difícil para nossa família."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/cliente-1.jpg" alt="Ricardo Silva">
+                        <div class="author-info">
+                            <h4>Ricardo Silva</h4>
+                            <span>São Paulo, SP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Encontramos o Carlos para cuidar do meu pai após uma cirurgia complicada. Sua formação em enfermagem foi fundamental para a recuperação rápida e segura. Recomendo muito!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/cliente-2.jpg" alt="Luciana Ferreira">
+                        <div class="author-info">
+                            <h4>Luciana Ferreira</h4>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"A Ana Cristina transformou a vida do meu filho com autismo. Ela tem uma abordagem carinhosa e profissional que criou uma rotina segura e estimulante para ele."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="img/cliente-3.jpg" alt="Márcio Gomes">
+                        <div class="author-info">
+                            <h4>Márcio Gomes</h4>
+                            <span>Belo Horizonte, MG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="how-it-works compact-how">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Contratar um Cuidador</h2>
+                <p>Processo simples e seguro para encontrar o profissional ideal</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Busque</h3>
+                    <p>Use os filtros para encontrar profissionais que atendam às suas necessidades específicas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Compare</h3>
+                    <p>Veja perfis, avaliações e experiências para escolher o melhor profissional.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Entreviste</h3>
+                    <p>Agende uma entrevista pela plataforma para conhecer melhor o profissional.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Contrate</h3>
+                    <p>Faça a contratação com segurança através da plataforma LivSafe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Precisa de um cuidador com urgência?</h2>
+                <p>Temos profissionais disponíveis para atendimento imediato. Utilize nosso serviço de emergência.</p>
+                <a href="#" class="btn btn-primary">Atendimento de Emergência</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                    </div>
+                    <p>Conectando você a profissionais qualificados para cuidar do que mais importa: sua família.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Marketplace</a></li>
+                        <li><a href="cuidadores.html">Cuidadores</a></li>
+                        <li><a href="farmacias.html">Farmácias</a></li>
+                        <li><a href="transporte.html">Transporte</a></li>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000, São Paulo - SP</li>
+                        <li><i class="fas fa-phone-alt"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> marketplace@livsafe.com.br</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LivSafe Marketplace. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

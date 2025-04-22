@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte Acessível | LivSafe Marketplace</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/transporte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="marketplace-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/livsafe-logo.png" alt="LivSafe Logo">
+                <h1>LivSafe Marketplace</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="cuidadores.html">Cuidadores</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                    <li><a href="transporte.html" class="active">Transporte</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="signup.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section transport-hero">
+        <div class="container">
+            <h1>Transporte Acessível</h1>
+            <p>Conectamos você aos melhores serviços de transporte adaptado para garantir mobilidade com segurança e conforto</p>
+            <div class="search-container">
+                <input type="text" placeholder="Digite seu endereço para encontrar transportes próximos">
+                <button class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="transport-types">
+        <div class="container">
+            <h2>Tipos de Transporte Disponíveis</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Veículos Adaptados</h3>
+                    <p>Carros e vans com elevadores, rampas e fixações para cadeiras de rodas</p>
+                    <a href="#" class="btn btn-outline">Ver opções</a>
+                </div>
+                <div class="type-card">
+                    <div class="icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Ambulâncias</h3>
+                    <p>Transporte médico com equipamentos de suporte para consultas e exames</p>
+                    <a href="#" class="btn btn-outline">Ver opções</a>
+                </div>
+                <div class="type-card">
+                    <div class="icon">
+                        <i class="fas fa-taxi"></i>
+                    </div>
+                    <h3>Táxi Acessível</h3>
+                    <p>Serviço de táxi com motoristas treinados e veículos adaptados</p>
+                    <a href="#" class="btn btn-outline">Ver opções</a>
+                </div>
+                <div class="type-card">
+                    <div class="icon">
+                        <i class="fas fa-bus-alt"></i>
+                    </div>
+                    <h3>Micro-ônibus</h3>
+                    <p>Transporte coletivo para grupos e instituições com acessibilidade total</p>
+                    <a href="#" class="btn btn-outline">Ver opções</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-providers">
+        <div class="container">
+            <h2>Provedores em Destaque</h2>
+            <div class="providers-grid">
+                <div class="provider-card">
+                    <div class="provider-image">
+                        <img src="images/transporte1.jpg" alt="MobilitySafe">
+                    </div>
+                    <div class="provider-info">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 (132 avaliações)</span>
+                        </div>
+                        <h3>MobilitySafe</h3>
+                        <p class="provider-desc">Frota completa de veículos adaptados com motoristas especializados.</p>
+                        <div class="provider-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Raio de 30km</span>
+                            <span><i class="fas fa-clock"></i> 24h</span>
+                            <span><i class="fas fa-tag"></i> A partir de R$45</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+
+                <div class="provider-card">
+                    <div class="provider-image">
+                        <img src="images/transporte2.jpg" alt="AccessRide">
+                    </div>
+                    <div class="provider-info">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (98 avaliações)</span>
+                        </div>
+                        <h3>AccessRide</h3>
+                        <p class="provider-desc">Especialistas em transporte de pacientes com necessidades especiais.</p>
+                        <div class="provider-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Raio de 50km</span>
+                            <span><i class="fas fa-clock"></i> 7h às 22h</span>
+                            <span><i class="fas fa-tag"></i> A partir de R$60</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+
+                <div class="provider-card">
+                    <div class="provider-image">
+                        <img src="images/transporte3.jpg" alt="MobilCare">
+                    </div>
+                    <div class="provider-info">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2 (157 avaliações)</span>
+                        </div>
+                        <h3>MobilCare</h3>
+                        <p class="provider-desc">Transporte com acompanhamento médico para consultas e exames.</p>
+                        <div class="provider-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Raio de 40km</span>
+                            <span><i class="fas fa-clock"></i> 6h às 20h</span>
+                            <span><i class="fas fa-tag"></i> A partir de R$75</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn btn-secondary">Ver todos os provedores</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Busque</h3>
+                    <p>Insira seu endereço e encontre serviços de transporte acessível na sua região</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Agende</h3>
+                    <p>Escolha a data, horário e especifique suas necessidades de acessibilidade</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Pague</h3>
+                    <p>Realize o pagamento de forma segura através da nossa plataforma</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Viaje</h3>
+                    <p>Receba confirmação e acompanhe seu motorista em tempo real pelo app</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="memberships">
+        <div class="container">
+            <h2>Planos de Assinatura</h2>
+            <p class="section-desc">Economize com nossos planos mensais para viagens frequentes</p>
+            
+            <div class="plans-container">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plano Básico</h3>
+                        <div class="plan-price">
+                            <span class="price">R$199</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5 viagens por mês</li>
+                            <li><i class="fas fa-check"></i> Raio de até 15km</li>
+                            <li><i class="fas fa-check"></i> Veículos adaptados</li>
+                            <li><i class="fas fa-check"></i> Cancelamento gratuito até 2h antes</li>
+                            <li><i class="fas fa-times"></i> Sem acompanhante</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-outline">Assinar</a>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="ribbon">Popular</div>
+                    <div class="plan-header">
+                        <h3>Plano Familiar</h3>
+                        <div class="plan-price">
+                            <span class="price">R$349</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 10 viagens por mês</li>
+                            <li><i class="fas fa-check"></i> Raio de até 30km</li>
+                            <li><i class="fas fa-check"></i> Veículos adaptados premium</li>
+                            <li><i class="fas fa-check"></i> Cancelamento gratuito até 1h antes</li>
+                            <li><i class="fas fa-check"></i> Acompanhante incluído</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary">Assinar</a>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Plano Premium</h3>
+                        <div class="plan-price">
+                            <span class="price">R$599</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Viagens ilimitadas</li>
+                            <li><i class="fas fa-check"></i> Raio de até 50km</li>
+                            <li><i class="fas fa-check"></i> Veículos adaptados premium + ambulância</li>
+                            <li><i class="fas fa-check"></i> Cancelamento gratuito a qualquer hora</li>
+                            <li><i class="fas fa-check"></i> Acompanhante especializado</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-outline">Assinar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Depoimentos</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>O serviço de transporte da LivSafe mudou completamente nossa rotina. Agora conseguimos levar nossa filha às terapias com conforto e segurança, sem o estresse de adaptar nosso carro.</p>
+                        <div class="client-info">
+                            <img src="images/cliente1.jpg" alt="Fernanda Silva">
+                            <div>
+                                <h4>Fernanda Silva</h4>
+                                <p>Mãe da Mariana, 12 anos</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Os motoristas são extremamente bem treinados e atenciosos. As viagens são pontuais e o aplicativo permite acompanhar todo o trajeto, trazendo tranquilidade para nossa família.</p>
+                        <div class="client-info">
+                            <img src="images/cliente2.jpg" alt="Carlos Mendes">
+                            <div>
+                                <h4>Carlos Mendes</h4>
+                                <p>Pai do Pedro, 8 anos</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>O plano familiar é excelente custo-benefício! Utilizamos para consultas médicas, terapias e atividades de lazer. Ter um acompanhante incluído no serviço faz toda diferença.</p>
+                        <div class="client-info">
+                            <img src="images/cliente3.jpg" alt="Ana e Roberto">
+                            <div>
+                                <h4>Ana e Roberto</h4>
+                                <p>Pais do Lucas, 15 anos</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o agendamento de viagens?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O agendamento pode ser feito pelo aplicativo ou site, com pelo menos 3 horas de antecedência. Para viagens recorrentes, recomendamos agendar com uma semana de antecedência para garantir disponibilidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quais medidas de segurança são adotadas nos transportes?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Todos os veículos são equipados com travas especiais para cadeiras de rodas, cintos de segurança adaptados, e são higienizados após cada viagem. Os motoristas são treinados em primeiros socorros e no manuseio de equipamentos de mobilidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso solicitar um motorista específico?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, após realizar uma viagem você pode adicionar um motorista à sua lista de favoritos e solicitar prioridade para viagens futuras, sujeito à disponibilidade do profissional.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Os planos de assinatura podem ser compartilhados?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O Plano Familiar permite até 3 perfis de passageiros registrados, ideal para famílias com mais de uma pessoa com necessidades especiais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o serviço de acompanhante profissional?</h3>
+                        <button class="toggle-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os acompanhantes são profissionais capacitados para assistência em mobilidade, transferências e necessidades básicas durante o trajeto. No Plano Premium, você pode solicitar acompanhantes com formação específica como enfermeiros ou fisioterapeutas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para simplificar a mobilidade da sua família?</h2>
+                <p>Cadastre-se hoje e ganhe 50% de desconto na primeira viagem!</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-large">Baixar o App</a>
+                    <a href="#" class="btn btn-outline btn-large">Agendar Demonstração</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/livsafe-logo.png" alt="LivSafe Logo">
+                        <h3>LivSafe</h3>
+                    </div>
+                    <p>Soluções inteligentes para conectar famílias a serviços especializados de transporte acessível.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Planos</a></li>
+                        <li><a href="#">Parceiros</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000, São Paulo - SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 4002-8922</li>
+                        <li><i class="fas fa-envelope"></i> contato@livsafe.com.br</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Receba Novidades</h4>
+                        <form>
+                            <input type="email" placeholder="Seu e-mail">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 LivSafe. Todos os direitos reservados.</p>
+                <div class="app-download">
+                    <a href="#"><img src="images/app-store.png" alt="App Store"></a>
+                    <a href="#"><img src="images/google-play.png" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/transporte.js"></script>
+</body>
+</html> 

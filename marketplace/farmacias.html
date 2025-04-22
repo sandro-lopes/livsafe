@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe Marketplace - Farmácias Parceiras</title>
+    <meta name="description" content="Encontre farmácias parceiras com entrega rápida, descontos exclusivos e programas de medicamentos contínuos para clientes LivSafe.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../app-web/img/favicon.ico">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="cuidadores.html">Cuidadores</a></li>
+                    <li><a href="farmacias.html" class="active">Farmácias</a></li>
+                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" class="login-link btn btn-outline">Entrar</a>
+                <a href="#" class="register-link btn btn-primary">Cadastrar</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero inner-page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Farmácias Parceiras</h1>
+                <p>Medicamentos com entrega rápida, descontos exclusivos e programas especiais para clientes LivSafe. Facilidade e economia na hora de cuidar da saúde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Busca e Filtros -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <form id="search-filters" class="search-form">
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="medication">Buscar Medicamento</label>
+                            <input type="text" id="medication" name="medication" placeholder="Nome do medicamento">
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="pharmacy">Farmácia</label>
+                            <select id="pharmacy" name="pharmacy">
+                                <option value="">Todas as farmácias</option>
+                                <option value="drogasil">Drogasil</option>
+                                <option value="drogaraia">Droga Raia</option>
+                                <option value="ultrafarma">Ultrafarma</option>
+                                <option value="drogariaspacheco">Drogarias Pacheco</option>
+                                <option value="paguemenos">Pague Menos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="delivery-time">Tempo de Entrega</label>
+                            <select id="delivery-time" name="delivery_time">
+                                <option value="">Qualquer tempo</option>
+                                <option value="1">Até 1 hora</option>
+                                <option value="2">Até 2 horas</option>
+                                <option value="4">Até 4 horas</option>
+                                <option value="24">Até 24 horas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="discount">Desconto Mínimo</label>
+                            <select id="discount" name="discount">
+                                <option value="">Qualquer desconto</option>
+                                <option value="10">10% ou mais</option>
+                                <option value="15">15% ou mais</option>
+                                <option value="20">20% ou mais</option>
+                                <option value="30">30% ou mais</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="category">Categoria</label>
+                            <select id="category" name="category">
+                                <option value="">Todas as categorias</option>
+                                <option value="heart">Cardíacos</option>
+                                <option value="diabetes">Diabetes</option>
+                                <option value="pain">Dor e Febre</option>
+                                <option value="hypertension">Hipertensão</option>
+                                <option value="vitamins">Vitaminas e Suplementos</option>
+                                <option value="dermatology">Dermatologia</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <label for="payment">Forma de Pagamento</label>
+                            <select id="payment" name="payment">
+                                <option value="">Todas as formas</option>
+                                <option value="credit">Cartão de Crédito</option>
+                                <option value="debit">Cartão de Débito</option>
+                                <option value="pix">PIX</option>
+                                <option value="money">Dinheiro</option>
+                                <option value="health_insurance">Convênio</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="has-generic" name="has_generic" value="1">
+                                <label for="has-generic">Apenas com Genéricos</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="24h" name="24h" value="1">
+                                <label for="24h">Farmácias 24h</label>
+                            </div>
+                        </div>
+                        
+                        <div class="search-group search-button-group">
+                            <button type="submit" class="btn btn-primary">Buscar Medicamentos</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Programas Especiais -->
+    <section class="special-programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Programas Especiais</h2>
+                <p>Benefícios exclusivos para clientes LivSafe</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Medicamento Contínuo</h3>
+                    <p>Cadastre seus medicamentos de uso contínuo e receba no dia certo, sem precisar lembrar. Até 25% de desconto.</p>
+                    <a href="#" class="btn btn-outline">Cadastrar</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Farmácia Popular</h3>
+                    <p>Medicamentos gratuitos ou com até 90% de desconto pelo programa Farmácia Popular do Governo Federal.</p>
+                    <a href="#" class="btn btn-outline">Saiba Mais</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>LivSafe Saúde+</h3>
+                    <p>Assinatura mensal com descontos especiais em todos os medicamentos e entrega gratuita ilimitada.</p>
+                    <a href="#" class="btn btn-outline">Assinar</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h3>Entrega Emergencial</h3>
+                    <p>Receba seus medicamentos urgentes em até 1 hora, disponível 24h para situações de emergência.</p>
+                    <a href="#" class="btn btn-outline">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Farmácias Parceiras -->
+    <section class="pharmacy-partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Farmácias Parceiras</h2>
+                <p>Escolha entre as melhores redes do mercado</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="img/farmacia-1.jpg" alt="Drogasil">
+                    </div>
+                    <div class="partner-info">
+                        <h3>Drogasil</h3>
+                        <div class="partner-features">
+                            <span class="feature"><i class="fas fa-percentage"></i> Até 20% de desconto</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Entrega em até 2h</span>
+                            <span class="feature"><i class="fas fa-capsules"></i> Ampla variedade de genéricos</span>
+                        </div>
+                        <p>150 lojas parceiras | Média de 4.7/5 (1250 avaliações)</p>
+                        <a href="#" class="btn btn-primary">Ver Medicamentos</a>
+                    </div>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="img/farmacia-2.jpg" alt="Droga Raia">
+                    </div>
+                    <div class="partner-info">
+                        <h3>Droga Raia</h3>
+                        <div class="partner-features">
+                            <span class="feature"><i class="fas fa-percentage"></i> Até 25% de desconto</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Entrega em até 1h</span>
+                            <span class="feature"><i class="fas fa-clock"></i> Farmácias 24h</span>
+                        </div>
+                        <p>130 lojas parceiras | Média de 4.8/5 (980 avaliações)</p>
+                        <a href="#" class="btn btn-primary">Ver Medicamentos</a>
+                    </div>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="img/farmacia-3.jpg" alt="Ultrafarma">
+                    </div>
+                    <div class="partner-info">
+                        <h3>Ultrafarma</h3>
+                        <div class="partner-features">
+                            <span class="feature"><i class="fas fa-percentage"></i> Até 30% de desconto</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Entrega em até 4h</span>
+                            <span class="feature"><i class="fas fa-tag"></i> Melhor preço garantido</span>
+                        </div>
+                        <p>85 lojas parceiras | Média de 4.5/5 (820 avaliações)</p>
+                        <a href="#" class="btn btn-primary">Ver Medicamentos</a>
+                    </div>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="img/farmacia-4.jpg" alt="Drogarias Pacheco">
+                    </div>
+                    <div class="partner-info">
+                        <h3>Drogarias Pacheco</h3>
+                        <div class="partner-features">
+                            <span class="feature"><i class="fas fa-percentage"></i> Até 22% de desconto</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Entrega em até 3h</span>
+                            <span class="feature"><i class="fas fa-notes-medical"></i> Farmácia Popular</span>
+                        </div>
+                        <p>110 lojas parceiras | Média de 4.6/5 (950 avaliações)</p>
+                        <a href="#" class="btn btn-primary">Ver Medicamentos</a>
+                    </div>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="img/farmacia-5.jpg" alt="Pague Menos">
+                    </div>
+                    <div class="partner-info">
+                        <h3>Pague Menos</h3>
+                        <div class="partner-features">
+                            <span class="feature"><i class="fas fa-percentage"></i> Até 20% de desconto</span>
+                            <span class="feature"><i class="fas fa-truck"></i> Entrega em até 2h</span>
+                            <span class="feature"><i class="fas fa-clinic-medical"></i> Serviços de Saúde</span>
+                        </div>
+                        <p>90 lojas parceiras | Média de 4.5/5 (780 avaliações)</p>
+                        <a href="#" class="btn btn-primary">Ver Medicamentos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Medicamentos Populares -->
+    <section class="popular-medications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Medicamentos Mais Procurados</h2>
+                <p>Com descontos exclusivos para clientes LivSafe</p>
+            </div>
+            
+            <div class="medications-slider">
+                <div class="medication-card">
+                    <div class="medication-image">
+                        <img src="img/medicamento-1.jpg" alt="Losartana Potássica">
+                        <span class="discount-badge">-25%</span>
+                    </div>
+                    <div class="medication-details">
+                        <h3>Losartana Potássica 50mg</h3>
+                        <p class="medication-type">Genérico | Anti-hipertensivo</p>
+                        <div class="medication-price">
+                            <span class="old-price">R$ 24,90</span>
+                            <span class="current-price">R$ 18,67</span>
+                        </div>
+                        <p class="delivery-time">Entrega em até 2h</p>
+                        <div class="pharmacy-info">
+                            <img src="img/farmacia-1-mini.jpg" alt="Drogasil">
+                            <span>Drogasil</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+                
+                <div class="medication-card">
+                    <div class="medication-image">
+                        <img src="img/medicamento-2.jpg" alt="Metformina">
+                        <span class="discount-badge">-30%</span>
+                    </div>
+                    <div class="medication-details">
+                        <h3>Metformina 850mg</h3>
+                        <p class="medication-type">Genérico | Antidiabético</p>
+                        <div class="medication-price">
+                            <span class="old-price">R$ 19,90</span>
+                            <span class="current-price">R$ 13,93</span>
+                        </div>
+                        <p class="delivery-time">Entrega em até 1h</p>
+                        <div class="pharmacy-info">
+                            <img src="img/farmacia-2-mini.jpg" alt="Droga Raia">
+                            <span>Droga Raia</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+                
+                <div class="medication-card">
+                    <div class="medication-image">
+                        <img src="img/medicamento-3.jpg" alt="Atorvastatina">
+                        <span class="discount-badge">-22%</span>
+                    </div>
+                    <div class="medication-details">
+                        <h3>Atorvastatina 20mg</h3>
+                        <p class="medication-type">Genérico | Redutor de Colesterol</p>
+                        <div class="medication-price">
+                            <span class="old-price">R$ 45,90</span>
+                            <span class="current-price">R$ 35,80</span>
+                        </div>
+                        <p class="delivery-time">Entrega em até 4h</p>
+                        <div class="pharmacy-info">
+                            <img src="img/farmacia-3-mini.jpg" alt="Ultrafarma">
+                            <span>Ultrafarma</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+                
+                <div class="medication-card">
+                    <div class="medication-image">
+                        <img src="img/medicamento-4.jpg" alt="Dipirona">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="medication-details">
+                        <h3>Dipirona 500mg</h3>
+                        <p class="medication-type">Genérico | Analgésico</p>
+                        <div class="medication-price">
+                            <span class="old-price">R$ 15,90</span>
+                            <span class="current-price">R$ 12,72</span>
+                        </div>
+                        <p class="delivery-time">Entrega em até 2h</p>
+                        <div class="pharmacy-info">
+                            <img src="img/farmacia-5-mini.jpg" alt="Pague Menos">
+                            <span>Pague Menos</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Medicamentos de uso contínuo?</h2>
+                <p>Cadastre-se no programa de recorrência e economize até 25% todos os meses, com entrega automatizada.</p>
+                <a href="#" class="btn btn-primary">Cadastrar Medicamentos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                    </div>
+                    <p>Conectando você a profissionais qualificados e serviços para cuidar do que mais importa: sua família.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Marketplace</a></li>
+                        <li><a href="cuidadores.html">Cuidadores</a></li>
+                        <li><a href="farmacias.html">Farmácias</a></li>
+                        <li><a href="transporte.html">Transporte</a></li>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000, São Paulo - SP</li>
+                        <li><i class="fas fa-phone-alt"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> marketplace@livsafe.com.br</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LivSafe Marketplace. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

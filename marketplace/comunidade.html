@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe Marketplace - Comunidade de Apoio</title>
+    <meta name="description" content="Conecte-se com famílias que enfrentam desafios semelhantes. Grupos de apoio, fóruns, encontros e recursos educacionais.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="../app-web/img/favicon.ico">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="cuidadores.html">Cuidadores</a></li>
+                    <li><a href="farmacias.html">Farmácias</a></li>
+                    <li><a href="transporte.html">Transporte</a></li>
+                    <li><a href="comunidade.html" class="active">Comunidade</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" class="login-link btn btn-outline">Entrar</a>
+                <a href="#" class="register-link btn btn-primary">Cadastrar</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero inner-page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Comunidade de Apoio</h1>
+                <p>Conecte-se com famílias que enfrentam desafios semelhantes. Compartilhe experiências, aprenda com os outros e encontre apoio emocional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Grupos -->
+    <section class="community-groups">
+        <div class="container">
+            <div class="section-header">
+                <h2>Grupos de Apoio</h2>
+                <p>Encontre grupos específicos para suas necessidades</p>
+            </div>
+            
+            <div class="groups-grid">
+                <div class="group-card">
+                    <div class="group-image">
+                        <img src="img/grupo-alzheimer.jpg" alt="Grupo Alzheimer">
+                    </div>
+                    <div class="group-details">
+                        <h3>Cuidando de quem tem Alzheimer</h3>
+                        <div class="group-meta">
+                            <span><i class="fas fa-users"></i> 345 membros</span>
+                            <span><i class="fas fa-comments"></i> Muito ativo</span>
+                        </div>
+                        <p>Grupo de apoio para familiares e cuidadores de pessoas com Alzheimer. Compartilhamos dicas, experiências e apoio emocional.</p>
+                        <div class="group-topics">
+                            <span class="topic">Rotina diária</span>
+                            <span class="topic">Medicação</span>
+                            <span class="topic">Comportamento</span>
+                            <span class="topic">Saúde mental</span>
+                        </div>
+                        <div class="group-cta">
+                            <a href="#" class="btn btn-primary">Participar</a>
+                            <a href="#" class="btn btn-outline">Ver Discussões</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group-card">
+                    <div class="group-image">
+                        <img src="img/grupo-autismo.jpg" alt="Grupo Autismo">
+                    </div>
+                    <div class="group-details">
+                        <h3>Pais e Mães de Crianças com Autismo</h3>
+                        <div class="group-meta">
+                            <span><i class="fas fa-users"></i> 523 membros</span>
+                            <span><i class="fas fa-comments"></i> Muito ativo</span>
+                        </div>
+                        <p>Espaço para troca de experiências entre pais e mães de crianças com TEA (Transtorno do Espectro Autista).</p>
+                        <div class="group-topics">
+                            <span class="topic">Educação</span>
+                            <span class="topic">Terapias</span>
+                            <span class="topic">Inclusão</span>
+                            <span class="topic">Desenvolvimento</span>
+                        </div>
+                        <div class="group-cta">
+                            <a href="#" class="btn btn-primary">Participar</a>
+                            <a href="#" class="btn btn-outline">Ver Discussões</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group-card">
+                    <div class="group-image">
+                        <img src="img/grupo-avc.jpg" alt="Grupo AVC">
+                    </div>
+                    <div class="group-details">
+                        <h3>Recuperação pós-AVC</h3>
+                        <div class="group-meta">
+                            <span><i class="fas fa-users"></i> 289 membros</span>
+                            <span><i class="fas fa-comments"></i> Ativo</span>
+                        </div>
+                        <p>Grupo dedicado a familiares e cuidadores de pessoas em recuperação de Acidente Vascular Cerebral (AVC).</p>
+                        <div class="group-topics">
+                            <span class="topic">Fisioterapia</span>
+                            <span class="topic">Fonoterapia</span>
+                            <span class="topic">Adaptações</span>
+                            <span class="topic">Reabilitação</span>
+                        </div>
+                        <div class="group-cta">
+                            <a href="#" class="btn btn-primary">Participar</a>
+                            <a href="#" class="btn btn-outline">Ver Discussões</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group-card">
+                    <div class="group-image">
+                        <img src="img/grupo-parkinson.jpg" alt="Grupo Parkinson">
+                    </div>
+                    <div class="group-details">
+                        <h3>Vivendo com Parkinson</h3>
+                        <div class="group-meta">
+                            <span><i class="fas fa-users"></i> 178 membros</span>
+                            <span><i class="fas fa-comments"></i> Ativo</span>
+                        </div>
+                        <p>Grupo de apoio para pacientes, familiares e cuidadores lidando com a doença de Parkinson.</p>
+                        <div class="group-topics">
+                            <span class="topic">Medicamentos</span>
+                            <span class="topic">Exercícios</span>
+                            <span class="topic">Alimentação</span>
+                            <span class="topic">Qualidade de vida</span>
+                        </div>
+                        <div class="group-cta">
+                            <a href="#" class="btn btn-primary">Participar</a>
+                            <a href="#" class="btn btn-outline">Ver Discussões</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-20">
+                <a href="#" class="btn btn-secondary">Ver Todos os Grupos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Eventos -->
+    <section class="community-events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Próximos Eventos</h2>
+                <p>Encontros presenciais e virtuais da nossa comunidade</p>
+            </div>
+            
+            <div class="events-slider">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Mai</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag online">Online</div>
+                        <h3>Palestra: Cuidados com Alzheimer em Estágio Avançado</h3>
+                        <p class="event-info"><i class="fas fa-clock"></i> 19:00 - 21:00</p>
+                        <p class="event-info"><i class="fas fa-user"></i> Dr. Ricardo Almeida, Neurologista</p>
+                        <p>Palestra online seguida de perguntas e respostas sobre os desafios e cuidados necessários em casos avançados de Alzheimer.</p>
+                        <a href="#" class="btn btn-outline">Inscrever-se</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">Mai</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag presential">Presencial</div>
+                        <h3>Café com Pais: Autismo e Desenvolvimento Social</h3>
+                        <p class="event-info"><i class="fas fa-clock"></i> 10:00 - 12:00</p>
+                        <p class="event-info"><i class="fas fa-map-marker-alt"></i> Centro Cultural São Paulo</p>
+                        <p>Encontro presencial para pais e responsáveis por crianças com TEA compartilharem experiências sobre desenvolvimento de habilidades sociais.</p>
+                        <a href="#" class="btn btn-outline">Inscrever-se</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">29</span>
+                        <span class="date-month">Mai</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-tag online">Online</div>
+                        <h3>Workshop: Exercícios para pacientes com Parkinson</h3>
+                        <p class="event-info"><i class="fas fa-clock"></i> 15:00 - 16:30</p>
+                        <p class="event-info"><i class="fas fa-user"></i> Dra. Mariana Costa, Fisioterapeuta</p>
+                        <p>Workshop prático demonstrando exercícios que podem ser feitos em casa para melhorar a mobilidade e qualidade de vida de pessoas com Parkinson.</p>
+                        <a href="#" class="btn btn-outline">Inscrever-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recursos Educacionais</h2>
+                <p>Materiais gratuitos para aprender sobre cuidados específicos</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Guias e E-books</h3>
+                    <ul class="resource-list">
+                        <li><a href="#">Guia Completo para Cuidadores de Idosos</a></li>
+                        <li><a href="#">Manual de Primeiros Socorros para Idosos</a></li>
+                        <li><a href="#">Nutrição para Pacientes com Alzheimer</a></li>
+                        <li><a href="#">Entendendo o TEA: Guia para Pais</a></li>
+                        <li><a href="#">Adaptações Residenciais para Mobilidade Reduzida</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Ver Biblioteca</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Vídeos e Webinars</h3>
+                    <ul class="resource-list">
+                        <li><a href="#">Série: Comunicação com Pacientes de Alzheimer</a></li>
+                        <li><a href="#">Técnicas de Transferência Segura de Pacientes</a></li>
+                        <li><a href="#">Webinar: Direitos dos Cuidadores no Brasil</a></li>
+                        <li><a href="#">Estimulação Cognitiva para Idosos</a></li>
+                        <li><a href="#">Cuidando de Quem Cuida: Saúde Mental</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Ver Biblioteca</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Artigos e Pesquisas</h3>
+                    <ul class="resource-list">
+                        <li><a href="#">Avanços no Tratamento de Alzheimer</a></li>
+                        <li><a href="#">Estudos sobre Estimulação Cognitiva em Idosos</a></li>
+                        <li><a href="#">Terapias Alternativas para Parkinson</a></li>
+                        <li><a href="#">Pesquisas recentes sobre TEA</a></li>
+                        <li><a href="#">Impacto do Exercício Físico na Longevidade</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Ver Biblioteca</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas Práticas</h3>
+                    <ul class="resource-list">
+                        <li><a href="#">Planilha de Controle de Medicação</a></li>
+                        <li><a href="#">Checklist Diário para Cuidadores</a></li>
+                        <li><a href="#">Diário de Comportamento para TEA</a></li>
+                        <li><a href="#">Plano de Emergência para Cuidadores</a></li>
+                        <li><a href="#">Calendário de Atividades para Estimulação</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Ver Biblioteca</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Histórias -->
+    <section class="community-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Histórias da Comunidade</h2>
+                <p>Depoimentos reais que inspiram e educam</p>
+            </div>
+            
+            <div class="stories-slider">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="img/historia-1.jpg" alt="Ana e sua mãe">
+                    </div>
+                    <div class="story-content">
+                        <h3>"Como reorganizamos nossa vida após o diagnóstico de Alzheimer"</h3>
+                        <p class="story-author">Por Ana Cardoso, cuidadora da mãe com Alzheimer há 4 anos</p>
+                        <p class="story-excerpt">Quando minha mãe foi diagnosticada com Alzheimer aos 73 anos, nossa família inteira precisou se reorganizar. Descobri nesta comunidade o suporte que precisava para...</p>
+                        <a href="#" class="btn btn-outline">Ler História Completa</a>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="img/historia-2.jpg" alt="Carlos e seu filho">
+                    </div>
+                    <div class="story-content">
+                        <h3>"Nosso caminho de descoberta após o diagnóstico de autismo"</h3>
+                        <p class="story-author">Por Carlos Silva, pai de Miguel, 7 anos, com TEA</p>
+                        <p class="story-excerpt">Quando Miguel foi diagnosticado aos 3 anos, nos sentimos perdidos. Hoje, graças às terapias certas e ao apoio desta comunidade, ele está se desenvolvendo de formas que...</p>
+                        <a href="#" class="btn btn-outline">Ler História Completa</a>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="img/historia-3.jpg" alt="Luiza e seu avô">
+                    </div>
+                    <div class="story-content">
+                        <h3>"Como a tecnologia ajudou meu avô após o AVC"</h3>
+                        <p class="story-author">Por Luiza Mendes, neta e cuidadora part-time</p>
+                        <p class="story-excerpt">Após o AVC do meu avô, que afetou sua mobilidade e fala, descobrimos diversas tecnologias assistivas que transformaram seu dia a dia e nos ajudaram a...</p>
+                        <a href="#" class="btn btn-outline">Ler História Completa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Fórum -->
+    <section class="community-forum">
+        <div class="container">
+            <div class="section-header">
+                <h2>Discussões Recentes</h2>
+                <p>Participe das conversas da nossa comunidade</p>
+            </div>
+            
+            <div class="forum-previews">
+                <div class="forum-topic">
+                    <div class="topic-author">
+                        <img src="img/user-1.jpg" alt="Mariana Sousa">
+                    </div>
+                    <div class="topic-content">
+                        <h3><a href="#">Como lidar com a recusa de medicação por idosos com Alzheimer?</a></h3>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Mariana Sousa</span>
+                            <span><i class="fas fa-clock"></i> Há 2 horas</span>
+                            <span><i class="fas fa-comments"></i> 12 respostas</span>
+                        </div>
+                        <p>Minha mãe com Alzheimer tem recusado tomar seus medicamentos. Já tentei esconder na comida, mas nem sempre funciona. Alguém tem alguma dica que tenha dado certo?</p>
+                        <div class="topic-tags">
+                            <span class="tag">Alzheimer</span>
+                            <span class="tag">Medicação</span>
+                            <span class="tag">Idosos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forum-topic">
+                    <div class="topic-author">
+                        <img src="img/user-2.jpg" alt="Roberto Alves">
+                    </div>
+                    <div class="topic-content">
+                        <h3><a href="#">Recomendações de aplicativos para monitoramento à distância?</a></h3>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Roberto Alves</span>
+                            <span><i class="fas fa-clock"></i> Há 5 horas</span>
+                            <span><i class="fas fa-comments"></i> 8 respostas</span>
+                        </div>
+                        <p>Preciso deixar meu pai, que tem Parkinson, sozinho por algumas horas durante o dia. Quais aplicativos vocês indicam para monitorá-lo à distância?</p>
+                        <div class="topic-tags">
+                            <span class="tag">Parkinson</span>
+                            <span class="tag">Tecnologia</span>
+                            <span class="tag">Monitoramento</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forum-topic">
+                    <div class="topic-author">
+                        <img src="img/user-3.jpg" alt="Fernanda Lima">
+                    </div>
+                    <div class="topic-content">
+                        <h3><a href="#">Escolas inclusivas em São Paulo para crianças com TEA</a></h3>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Fernanda Lima</span>
+                            <span><i class="fas fa-clock"></i> Há 1 dia</span>
+                            <span><i class="fas fa-comments"></i> 15 respostas</span>
+                        </div>
+                        <p>Estamos procurando uma escola realmente inclusiva em São Paulo para nossa filha de 6 anos com TEA. Alguém tem experiências positivas para compartilhar?</p>
+                        <div class="topic-tags">
+                            <span class="tag">Autismo</span>
+                            <span class="tag">Educação</span>
+                            <span class="tag">São Paulo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-20">
+                <a href="#" class="btn btn-secondary">Ir para o Fórum</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Faça parte da nossa comunidade</h2>
+                <p>Cadastre-se gratuitamente e conecte-se com pessoas que entendem sua jornada.</p>
+                <a href="#" class="btn btn-primary">Criar Conta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../app-web/img/logo.png" alt="LivSafe Logo">
+                    </div>
+                    <p>Conectando você a profissionais qualificados e serviços para cuidar do que mais importa: sua família.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Marketplace</a></li>
+                        <li><a href="cuidadores.html">Cuidadores</a></li>
+                        <li><a href="farmacias.html">Farmácias</a></li>
+                        <li><a href="transporte.html">Transporte</a></li>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000, São Paulo - SP</li>
+                        <li><i class="fas fa-phone-alt"></i> (11) 3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> marketplace@livsafe.com.br</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LivSafe Marketplace. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
