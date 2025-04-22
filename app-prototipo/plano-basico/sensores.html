@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe - Sensores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sensor-details {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .sensor-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .sensor-header-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--success-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+        }
+        
+        .sensor-info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sensor-info-label {
+            color: var(--text-secondary);
+        }
+        
+        .sensor-info-value {
+            font-weight: 600;
+        }
+        
+        .sensor-chart {
+            height: 200px;
+            background-color: #f5f5f7;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+        
+        .history-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            background-color: #f5f5f7;
+        }
+        
+        .history-item .time {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        
+        .history-item.alert {
+            background-color: rgba(255, 59, 48, 0.1);
+            border-left: 3px solid var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="user-greeting">
+                <h1>Sensores</h1>
+                <p>Plano Básico</p>
+            </div>
+            <div class="user-profile">
+                <img src="../imagens/profile-icon.png" alt="Perfil" class="profile-icon">
+            </div>
+        </header>
+        
+        <!-- Detalhes do Sensor de Fumaça -->
+        <div class="sensor-details">
+            <div class="sensor-header">
+                <div class="sensor-header-icon">
+                    <i class="fas fa-smoke"></i>
+                </div>
+                <div>
+                    <h2>Detector de Fumaça</h2>
+                    <p id="smoke-status" class="sensor-status">Normal</p>
+                </div>
+            </div>
+            
+            <div class="sensor-info">
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Status</span>
+                    <span class="sensor-info-value" id="smoke-sensor-status">Ativo</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Bateria</span>
+                    <span class="sensor-info-value">98%</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Última verificação</span>
+                    <span class="sensor-info-value">Hoje, 14:35</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Local</span>
+                    <span class="sensor-info-value">Sala</span>
+                </div>
+            </div>
+            
+            <div class="sensor-chart">
+                <p>Gráfico de Níveis (simulação)</p>
+            </div>
+            
+            <div class="history-section">
+                <h3>Histórico</h3>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="time">Hoje, 14:35</div>
+                        <div class="event">Verificação de rotina: Normal</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="time">Hoje, 08:20</div>
+                        <div class="event">Verificação de rotina: Normal</div>
+                    </div>
+                    <div class="history-item alert">
+                        <div class="time">Ontem, 19:42</div>
+                        <div class="event">Alerta! Fumaça detectada</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="time">Ontem, 19:45</div>
+                        <div class="event">Retorno à normalidade</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detalhes do Sensor de Monóxido de Carbono -->
+        <div class="sensor-details">
+            <div class="sensor-header">
+                <div class="sensor-header-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div>
+                    <h2>Monóxido de Carbono</h2>
+                    <p id="co-status" class="sensor-status">Normal</p>
+                </div>
+            </div>
+            
+            <div class="sensor-info">
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Status</span>
+                    <span class="sensor-info-value" id="co-sensor-status">Ativo</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Bateria</span>
+                    <span class="sensor-info-value">95%</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Última verificação</span>
+                    <span class="sensor-info-value">Hoje, 14:35</span>
+                </div>
+                <div class="sensor-info-item">
+                    <span class="sensor-info-label">Local</span>
+                    <span class="sensor-info-value">Cozinha</span>
+                </div>
+            </div>
+            
+            <div class="sensor-chart">
+                <p>Gráfico de Níveis (simulação)</p>
+            </div>
+            
+            <div class="history-section">
+                <h3>Histórico</h3>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="time">Hoje, 14:35</div>
+                        <div class="event">Verificação de rotina: Normal</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="time">Hoje, 08:20</div>
+                        <div class="event">Verificação de rotina: Normal</div>
+                    </div>
+                    <div class="history-item">
+                        <div class="time">Ontem, 14:30</div>
+                        <div class="event">Verificação de rotina: Normal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="simulateAlert()" class="emergency-button" style="background-color: var(--primary-color)">
+            <i class="fas fa-bell"></i>
+            <span>Simular Alerta (Demonstração)</span>
+        </button>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="sensores.html" class="nav-item active">
+                <i class="fas fa-sensor"></i>
+                <span>Sensores</span>
+            </a>
+            <a href="perfil.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function simulateAlert() {
+            const sensorType = Math.random() > 0.5 ? 'smoke' : 'co';
+            const sensorStatus = document.getElementById(`${sensorType}-status`);
+            
+            // Atualizar status
+            sensorStatus.textContent = sensorType === 'smoke' ? 'Fumaça detectada!' : 'Níveis perigosos!';
+            
+            // Adicionar nova entrada no histórico
+            const historyList = document.querySelectorAll('.history-list')[sensorType === 'smoke' ? 0 : 1];
+            const newItem = document.createElement('div');
+            newItem.className = 'history-item alert';
+            
+            const now = new Date();
+            const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+            
+            newItem.innerHTML = `
+                <div class="time">Agora, ${timeStr}</div>
+                <div class="event">Alerta! ${sensorType === 'smoke' ? 'Fumaça detectada' : 'Níveis elevados de CO'}</div>
+            `;
+            
+            historyList.insertBefore(newItem, historyList.firstChild);
+            
+            // Mostrar alerta
+            showAlert('Alerta', sensorType === 'smoke' ? 'Fumaça detectada! Verifique o ambiente.' : 'Níveis perigosos de monóxido de carbono detectados!', 'danger');
+            
+            // Voltar ao normal após 5 segundos
+            setTimeout(() => {
+                sensorStatus.textContent = 'Normal';
+                
+                const returnItem = document.createElement('div');
+                returnItem.className = 'history-item';
+                
+                const newNow = new Date();
+                const newTimeStr = `${newNow.getHours().toString().padStart(2, '0')}:${newNow.getMinutes().toString().padStart(2, '0')}`;
+                
+                returnItem.innerHTML = `
+                    <div class="time">Agora, ${newTimeStr}</div>
+                    <div class="event">Retorno à normalidade</div>
+                `;
+                
+                historyList.insertBefore(returnItem, historyList.firstChild);
+                
+                showAlert('Informação', 'Sensor voltou ao estado normal.', 'success');
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 

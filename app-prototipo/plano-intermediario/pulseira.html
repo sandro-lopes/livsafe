@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe - Pulseira Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .bracelet-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .bracelet-icon-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            margin: 0 auto 15px;
+        }
+        
+        .bracelet-status-large {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--success-color);
+            margin-bottom: 5px;
+        }
+        
+        .bracelet-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .info-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .info-card-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            color: var(--text-secondary);
+        }
+        
+        .info-value {
+            font-weight: 600;
+        }
+        
+        .info-value.success {
+            color: var(--success-color);
+        }
+        
+        .info-value.warning {
+            color: var(--warning-color);
+        }
+        
+        .info-value.danger {
+            color: var(--danger-color);
+        }
+        
+        .battery-indicator {
+            height: 15px;
+            background-color: #E0E0E0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .battery-level {
+            height: 100%;
+            background-color: var(--success-color);
+            border-radius: 10px;
+        }
+        
+        .location-map {
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+        
+        .action-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 15px;
+        }
+        
+        .action-button i {
+            margin-right: 10px;
+        }
+        
+        .action-button.secondary {
+            background-color: var(--text-secondary);
+        }
+        
+        .history-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .history-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .history-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #f5f5f7;
+        }
+        
+        .history-item .time {
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .history-item .event {
+            font-weight: 500;
+        }
+        
+        .history-item.alert {
+            background-color: rgba(255, 59, 48, 0.1);
+            border-left: 3px solid var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="user-greeting">
+                <h1>Pulseira</h1>
+                <p>Plano Intermediário</p>
+            </div>
+            <div class="user-profile">
+                <img src="../imagens/profile-icon-maria.png" alt="Perfil" class="profile-icon">
+            </div>
+        </header>
+        
+        <div class="bracelet-header">
+            <div class="bracelet-icon-large">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="bracelet-status-large">Conectada</div>
+            <div class="bracelet-name">Pulseira Inteligente</div>
+        </div>
+        
+        <div class="info-card">
+            <div class="info-card-title">Status</div>
+            
+            <div class="info-item">
+                <div class="info-label">Bateria</div>
+                <div class="info-value" id="bracelet-battery-level">85%</div>
+            </div>
+            
+            <div class="battery-indicator">
+                <div class="battery-level" id="battery-level-visual" style="width: 85%"></div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Último sinal</div>
+                <div class="info-value">Agora mesmo</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Frequência cardíaca</div>
+                <div class="info-value success" id="heart-rate">72 bpm</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Status</div>
+                <div class="info-value success">Normal</div>
+            </div>
+        </div>
+        
+        <div class="info-card">
+            <div class="info-card-title">Localização</div>
+            
+            <div class="location-map">
+                <p><i class="fas fa-map-marker-alt"></i> Mapa de localização (simulação)</p>
+            </div>
+            
+            <button class="action-button" onclick="showAlert('Localização', 'Atualizando localização da pulseira...', 'success')">
+                <i class="fas fa-location-arrow"></i>
+                <span>Localizar agora</span>
+            </button>
+            
+            <div class="info-item">
+                <div class="info-label">Última localização</div>
+                <div class="info-value">Casa</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Atualizado</div>
+                <div class="info-value" id="location-time">Há 2 minutos</div>
+            </div>
+        </div>
+        
+        <div class="history-card">
+            <div class="history-title">Histórico</div>
+            
+            <div class="history-list">
+                <div class="history-item">
+                    <div class="time">Hoje, 14:35</div>
+                    <div class="event">Pulseira conectada</div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="time">Hoje, 14:30</div>
+                    <div class="event">Localização atualizada: Casa</div>
+                </div>
+                
+                <div class="history-item alert">
+                    <div class="time">Ontem, 19:45</div>
+                    <div class="event">Bateria baixa (15%)</div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="time">Ontem, 18:22</div>
+                    <div class="event">Localização atualizada: Rua Augusta</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="action-button secondary" onclick="showAlert('Configurações', 'Abrindo configurações da pulseira', 'success')">
+            <i class="fas fa-cog"></i>
+            <span>Configurações da Pulseira</span>
+        </button>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="camera.html" class="nav-item">
+                <i class="fas fa-video"></i>
+                <span>Câmera</span>
+            </a>
+            <a href="pulseira.html" class="nav-item active">
+                <i class="fas fa-heartbeat"></i>
+                <span>Pulseira</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Simulação da bateria da pulseira
+        let batteryLevel = 85;
+        const batteryText = document.getElementById('bracelet-battery-level');
+        const batteryVisual = document.getElementById('battery-level-visual');
+        
+        // Função para atualizar nível da bateria
+        function updateBattery() {
+            batteryLevel = Math.max(0, batteryLevel - 1);
+            batteryText.textContent = `${batteryLevel}%`;
+            batteryVisual.style.width = `${batteryLevel}%`;
+            
+            // Alterar cor conforme o nível da bateria
+            if (batteryLevel <= 20) {
+                batteryVisual.style.backgroundColor = 'var(--danger-color)';
+                
+                if (batteryLevel === 20) {
+                    showAlert('Aviso', 'Bateria da pulseira está em 20%. Recomendamos recarregar.', 'warning');
+                    
+                    // Adicionar ao histórico
+                    addHistoryItem('Bateria baixa (20%)', true);
+                }
+            } else if (batteryLevel <= 50) {
+                batteryVisual.style.backgroundColor = 'var(--warning-color)';
+            } else {
+                batteryVisual.style.backgroundColor = 'var(--success-color)';
+            }
+        }
+        
+        // Simular batimentos cardíacos
+        const heartRateDisplay = document.getElementById('heart-rate');
+        let heartRate = 72;
+        
+        function updateHeartRate() {
+            // Variação aleatória entre -2 e +2
+            const variation = Math.floor(Math.random() * 5) - 2;
+            heartRate = Math.max(60, Math.min(100, heartRate + variation));
+            
+            heartRateDisplay.textContent = `${heartRate} bpm`;
+            
+            // Alterar cor conforme a frequência
+            if (heartRate > 90) {
+                heartRateDisplay.className = 'info-value warning';
+                
+                // 25% de chance de gerar um alerta
+                if (heartRate > 95 && Math.random() < 0.25) {
+                    showAlert('Aviso', 'Frequência cardíaca elevada detectada.', 'warning');
+                    addHistoryItem('Frequência cardíaca elevada: ' + heartRate + ' bpm', true);
+                }
+            } else if (heartRate < 65) {
+                heartRateDisplay.className = 'info-value warning';
+                
+                // 25% de chance de gerar um alerta
+                if (heartRate < 62 && Math.random() < 0.25) {
+                    showAlert('Aviso', 'Frequência cardíaca baixa detectada.', 'warning');
+                    addHistoryItem('Frequência cardíaca baixa: ' + heartRate + ' bpm', true);
+                }
+            } else {
+                heartRateDisplay.className = 'info-value success';
+            }
+        }
+        
+        // Atualizar localização
+        const locationTime = document.getElementById('location-time');
+        let locationMinutes = 2;
+        
+        function updateLocationTime() {
+            locationMinutes++;
+            if (locationMinutes < 60) {
+                locationTime.textContent = `Há ${locationMinutes} minutos`;
+            } else {
+                const hours = Math.floor(locationMinutes / 60);
+                const mins = locationMinutes % 60;
+                locationTime.textContent = `Há ${hours}h ${mins}min`;
+            }
+        }
+        
+        // Adicionar item ao histórico
+        function addHistoryItem(message, isAlert = false) {
+            const historyList = document.querySelector('.history-list');
+            const newItem = document.createElement('div');
+            newItem.className = isAlert ? 'history-item alert' : 'history-item';
+            
+            const now = new Date();
+            const timeStr = `Agora, ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+            
+            newItem.innerHTML = `
+                <div class="time">${timeStr}</div>
+                <div class="event">${message}</div>
+            `;
+            
+            historyList.insertBefore(newItem, historyList.firstChild);
+        }
+        
+        // Iniciar simulações ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Atualizar bateria a cada 2 minutos
+            setInterval(updateBattery, 120000);
+            
+            // Atualizar batimentos a cada 10 segundos
+            setInterval(updateHeartRate, 10000);
+            
+            // Atualizar tempo da localização a cada minuto
+            setInterval(updateLocationTime, 60000);
+            
+            // Simular quedas aleatórias (5% de chance a cada 3 minutos)
+            setInterval(() => {
+                if (Math.random() < 0.05) {
+                    showAlert('ALERTA!', 'Possível queda detectada! Enviando alerta para contatos de emergência.', 'danger');
+                    addHistoryItem('Possível queda detectada', true);
+                    
+                    // Simular confirmação da queda
+                    setTimeout(() => {
+                        showAlert('Informação', 'Confirmação de segurança enviada. Nenhuma ação necessária.', 'success');
+                        addHistoryItem('Confirmação de segurança enviada');
+                    }, 10000);
+                }
+            }, 180000);
+            
+            // Executar uma vez para demonstração depois de 30 segundos
+            setTimeout(() => {
+                updateHeartRate();
+                addHistoryItem('Localização atualizada: Casa');
+            }, 30000);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe - Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .profile-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .profile-info {
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+        
+        .settings-list {
+            margin-top: 20px;
+        }
+        
+        .settings-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .settings-item:last-child {
+            border-bottom: none;
+        }
+        
+        .settings-item-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .settings-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 122, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+        
+        .settings-title {
+            font-weight: 600;
+        }
+        
+        .settings-description {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .chevron-icon {
+            color: var(--text-secondary);
+        }
+        
+        .subscription-card {
+            background: linear-gradient(135deg, #007AFF, #0055CC);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .subscription-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .subscription-price {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .subscription-features {
+            margin-bottom: 15px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .feature-item i {
+            margin-right: 10px;
+        }
+        
+        .upgrade-button {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="user-greeting">
+                <h1>Perfil</h1>
+                <p>Plano Básico</p>
+            </div>
+            <div class="user-profile">
+                <img src="../imagens/profile-icon.png" alt="Perfil" class="profile-icon">
+            </div>
+        </header>
+        
+        <!-- Perfil do Usuário -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="../imagens/profile-icon.png" alt="João Silva" class="profile-image">
+                <h2 class="profile-name">João Silva</h2>
+                <p class="profile-info">joao.silva@email.com</p>
+                <p class="profile-info">(11) 98765-4321</p>
+            </div>
+            
+            <button class="emergency-button" style="background-color: var(--primary-color)">
+                <i class="fas fa-user-edit"></i>
+                <span>Editar Perfil</span>
+            </button>
+        </div>
+        
+        <!-- Informações da Assinatura -->
+        <div class="subscription-card">
+            <h2 class="subscription-title">Plano Básico</h2>
+            <p class="subscription-price">R$ 129,90/mês</p>
+            
+            <div class="subscription-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Monitoramento de fumaça</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Monitoramento de monóxido de carbono</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Botão de emergência GPS</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Sistema de backup de energia (4h)</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Hub Home Assistant</span>
+                </div>
+            </div>
+            
+            <a href="#" class="upgrade-button">Fazer Upgrade</a>
+        </div>
+        
+        <!-- Configurações -->
+        <div class="profile-card">
+            <h2>Configurações</h2>
+            
+            <div class="settings-list">
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <div class="settings-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div>
+                            <div class="settings-title">Notificações</div>
+                            <div class="settings-description">Gerenciar alertas e notificações</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right chevron-icon"></i>
+                </div>
+                
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <div class="settings-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <div class="settings-title">Segurança</div>
+                            <div class="settings-description">Alterar senha e configurações de segurança</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right chevron-icon"></i>
+                </div>
+                
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <div class="settings-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div>
+                            <div class="settings-title">Pagamento</div>
+                            <div class="settings-description">Gerenciar métodos de pagamento</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right chevron-icon"></i>
+                </div>
+                
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <div class="settings-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div>
+                            <div class="settings-title">Preferências</div>
+                            <div class="settings-description">Personalizar sua experiência</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right chevron-icon"></i>
+                </div>
+                
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <div class="settings-icon" style="color: var(--danger-color); background-color: rgba(255, 59, 48, 0.1);">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <div>
+                            <div class="settings-title">Sair</div>
+                            <div class="settings-description">Encerrar sessão</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right chevron-icon"></i>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="sensores.html" class="nav-item">
+                <i class="fas fa-sensor"></i>
+                <span>Sensores</span>
+            </a>
+            <a href="perfil.html" class="nav-item active">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LivSafe Premium - Painel de Controle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Cabeçalho -->
+        <header class="app-header">
+            <div class="user-greeting">
+                <h1>Olá, Maria</h1>
+                <p class="status">Segurança Premium Ativa</p>
+            </div>
+            <div class="user-avatar">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Avatar do usuário">
+            </div>
+        </header>
+
+        <!-- Seletor de Modo de Segurança -->
+        <div class="security-modes">
+            <h2>Modo de Segurança</h2>
+            <div class="mode-options">
+                <div class="mode-option" data-mode="normal">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Normal</span>
+                </div>
+                <div class="mode-option" data-mode="away">
+                    <i class="fas fa-luggage-cart"></i>
+                    <span>Ausente</span>
+                </div>
+                <div class="mode-option" data-mode="night">
+                    <i class="fas fa-moon"></i>
+                    <span>Noturno</span>
+                </div>
+                <div class="mode-option" data-mode="emergency">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Emergência</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard de Sensores -->
+        <div class="dashboard-grid">
+            <div class="grid-item sensors">
+                <div class="grid-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>Sensores</h3>
+                    <p>8/8 online</p>
+                </div>
+            </div>
+            
+            <div class="grid-item cameras">
+                <div class="grid-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>Câmeras</h3>
+                    <p>8/8 online</p>
+                </div>
+            </div>
+            
+            <div class="grid-item smoke">
+                <div class="grid-icon">
+                    <i class="fas fa-smog"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>Fumaça</h3>
+                    <p>Normal</p>
+                </div>
+            </div>
+            
+            <div class="grid-item co">
+                <div class="grid-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>CO</h3>
+                    <p>Normal</p>
+                </div>
+            </div>
+            
+            <div class="grid-item bracelets">
+                <div class="grid-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>Pulseiras</h3>
+                    <p>2/2 ativas</p>
+                </div>
+            </div>
+            
+            <div class="grid-item backup">
+                <div class="grid-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="grid-content">
+                    <h3>Backup</h3>
+                    <p>Atualizado</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controle de Válvulas -->
+        <div class="valves-section">
+            <h2>Controle de Válvulas</h2>
+            <div class="valves-container">
+                <div class="valve-item">
+                    <div class="valve-icon gas">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="valve-content" data-valve="gas">
+                        <h3>Válvula de Gás</h3>
+                        <p class="closed">Fechada</p>
+                        <label class="switch">
+                            <input type="checkbox" id="gas-valve-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="valve-item">
+                    <div class="valve-icon water">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="valve-content" data-valve="water">
+                        <h3>Válvula de Água</h3>
+                        <p class="closed">Fechada</p>
+                        <label class="switch">
+                            <input type="checkbox" id="water-valve-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Radar -->
+        <div class="radar-section">
+            <div class="radar-header">
+                <h2>Radar de Precisão</h2>
+                <label class="switch">
+                    <input type="checkbox" id="radar-toggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            
+            <div class="radar-container">
+                <div class="radar-display">
+                    <!-- Elementos de radar serão adicionados via JavaScript -->
+                </div>
+                <div class="radar-status">
+                    <h3>Status</h3>
+                    <p id="radar-status-text">Nenhum movimento</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Emergência -->
+        <div class="emergency-section">
+            <button class="emergency-button">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>EMERGÊNCIA</span>
+            </button>
+            <p>Pressione em caso de emergência</p>
+        </div>
+
+        <!-- Navegação Inferior -->
+        <nav class="bottom-navigation">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-video"></i>
+                <span>Câmeras</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-history"></i>
+                <span>Histórico</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Ajustes</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

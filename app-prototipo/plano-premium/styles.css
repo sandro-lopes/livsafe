@@ -1,0 +1,566 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #4a148c;
+    --primary-light: #7c43bd;
+    --accent-color: #ffd700;
+    --text-color: #333;
+    --text-light: #666;
+    --bg-color: #f5f5f5;
+    --card-bg: #fff;
+    --danger-color: #e53935;
+    --success-color: #43a047;
+    --warning-color: #fb8c00;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+/* Cabeçalho */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    padding: 20px;
+    border-radius: var(--radius);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.user-greeting h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.user-greeting .status {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.user-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+}
+
+/* Modos de segurança */
+.security-modes {
+    margin-bottom: 24px;
+}
+
+.security-modes h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+.mode-options {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 5px 0;
+}
+
+.mode-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: var(--radius);
+    min-width: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    margin-right: 10px;
+}
+
+.mode-option:last-child {
+    margin-right: 0;
+}
+
+.mode-option i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.mode-option span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.mode-option.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mode-option.active i {
+    color: white;
+}
+
+.mode-option[data-mode="emergency"] {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.mode-option[data-mode="emergency"] i {
+    color: white;
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.grid-item {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(74, 20, 140, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.grid-icon i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.grid-content h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.grid-content p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* Customização de cores para ícones específicos */
+.smoke .grid-icon {
+    background-color: rgba(251, 140, 0, 0.1);
+}
+
+.smoke .grid-icon i {
+    color: var(--warning-color);
+}
+
+.co .grid-icon {
+    background-color: rgba(229, 57, 53, 0.1);
+}
+
+.co .grid-icon i {
+    color: var(--danger-color);
+}
+
+.cameras .grid-icon {
+    background-color: rgba(67, 160, 71, 0.1);
+}
+
+.cameras .grid-icon i {
+    color: var(--success-color);
+}
+
+/* Controle de válvulas */
+.valves-section {
+    margin-bottom: 24px;
+}
+
+.valves-section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+.valves-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.valve-item {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 15px;
+    box-shadow: var(--shadow);
+}
+
+.valve-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.valve-icon.gas {
+    background-color: rgba(229, 57, 53, 0.1);
+}
+
+.valve-icon.gas i {
+    color: var(--danger-color);
+}
+
+.valve-icon.water {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.valve-icon.water i {
+    color: #2196f3;
+}
+
+.valve-content h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.valve-content p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.valve-content p.opened {
+    color: var(--success-color);
+}
+
+.valve-content p.closed {
+    color: var(--danger-color);
+}
+
+/* Switch toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Radar */
+.radar-section {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 15px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.radar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.radar-header h2 {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.radar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.radar-display {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.radar-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radar-status h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.radar-status p {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* Emergência */
+.emergency-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.emergency-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: var(--danger-color);
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.emergency-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(229, 57, 53, 0.6);
+}
+
+.emergency-button i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.emergency-button span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.emergency-section p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* Navegação inferior */
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* Notificações */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 300px;
+    max-width: 90%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.notification.success {
+    border-left: 4px solid var(--success-color);
+}
+
+.notification.error {
+    border-left: 4px solid var(--danger-color);
+}
+
+.notification.warning {
+    border-left: 4px solid var(--warning-color);
+}
+
+.notification.info {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Elementos de radar via JavaScript */
+.radar-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 1px solid rgba(74, 20, 140, 0.3);
+    transform: translate(-50%, -50%);
+}
+
+.radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: rgba(74, 20, 140, 0.6);
+    transform-origin: left center;
+    transform: rotate(0deg);
+    z-index: 2;
+}
+
+.radar-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--danger-color);
+    border-radius: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+
+.radar-dot.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(229, 57, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+    }
+}
+
+/* Media queries para responsividade */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 15px;
+        padding-bottom: 80px;
+    }
+    
+    .dashboard-grid, .valves-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .mode-option {
+        min-width: 70px;
+        padding: 12px;
+    }
+} 
